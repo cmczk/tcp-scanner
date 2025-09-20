@@ -12,15 +12,10 @@ type Scanner struct {
 	maxPort int
 }
 
-func New(host string, minPort *int, maxPort int) *Scanner {
-	min := 1
-	if minPort != nil {
-		min = *minPort
-	}
-
+func New(host string, minPort int, maxPort int) *Scanner {
 	return &Scanner{
 		host:    host,
-		minPort: min,
+		minPort: minPort,
 		maxPort: maxPort,
 	}
 }
